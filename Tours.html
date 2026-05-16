@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tours Full Day · Casa Grande</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="tours.css" />
+</head>
+<body>
+
+  <div id="cursor"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <a class="nav-logo" href="index.html">← Casa Grande</a>
+    <span class="nav-titulo">Tours Full Day</span>
+    <a class="nav-cta" href="index.html#contacto">Contacto</a>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header id="hero-tours">
+    <div class="hero-foto"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">✦ Explora con nosotros</span>
+      <h1 class="hero-titulo">Descubre los mejores<br><em>destinos</em></h1>
+      <p class="hero-sub">Haz clic en cada destino para ver actividades, fotos y precios. Luego elige tu modalidad.</p>
+      <a class="btn-scroll" href="#destinos">Ver destinos ↓</a>
+    </div>
+  </header>
+
+  <!-- ===== BARRA "CÓMO FUNCIONA" ===== -->
+  <div class="como-funciona">
+    <div class="cf-paso">
+      <span class="cf-num">1</span>
+      <p>Haz <strong>clic en la foto</strong> del destino</p>
+    </div>
+    <div class="cf-flecha">→</div>
+    <div class="cf-paso">
+      <span class="cf-num">2</span>
+      <p>Ve actividades, fotos y <strong>precios</strong></p>
+    </div>
+    <div class="cf-flecha">→</div>
+    <div class="cf-paso">
+      <span class="cf-num">3</span>
+      <p>Elige tu <strong>modalidad</strong> y reserva</p>
+    </div>
+  </div>
+
+  <!-- ===== SECCIÓN DESTINOS ===== -->
+  <section id="destinos">
+    <div class="seccion-cab">
+      <span class="tag">✦ Destinos Icónicos</span>
+      <h2 class="seccion-titulo">Lugares que <em>no olvidarás</em></h2>
+      <p class="seccion-sub">Haz clic en la foto de cada destino para descubrir sus actividades y precios.</p>
+    </div>
+
+    <!-- FILTROS -->
+    <div class="filtros-wrap">
+      <span class="filtros-label">Filtrar:</span>
+      <div class="filtros">
+        <button class="filtro-btn activo" data-filtro="todos">Todos</button>
+        <button class="filtro-btn" data-filtro="guia">Solo Guía</button>
+        <button class="filtro-btn" data-filtro="con-chofer">Con Chofer</button>
+        <button class="filtro-btn" data-filtro="sin-chofer">Solo Camioneta</button>
+      </div>
+    </div>
+
+    <!-- SLIDER -->
+    <div class="slider-container">
+      <button class="slider-btn prev-btn" aria-label="Anterior">‹</button>
+
+      <div class="slider-wrapper">
+        <div class="destinos-slider" id="destinosGrid">
+
+          <!-- ══════════════════════════
+               TARJETA 1: TÍO YACU
+          ══════════════════════════ -->
+          <article class="destino-card" data-modalidades="guia con-chofer sin-chofer">
+            <div class="card-inner">
+
+              <div class="card-front">
+                <div class="dest-foto">
+                  <img src="IMG/image/tio yacu.jpg"
+                       onerror="this.src='https://images.unsplash.com/photo-1531722569936-825d4eeff6ac?w=800&q=80'"
+                       alt="Tío Yacu" />
+                  <div class="foto-gradiente"></div>
+                  <span class="dest-categoria">💧 Pozas Naturales</span>
+                  <div class="click-hint">Clic para descubrir ✦</div>
+                </div>
+                <div class="dest-info-frontal">
+                  <h3 class="dest-nombre">Tío Yacu</h3>
+                  <p class="dest-lugar">📍 Rioja, San Martín</p>
+                  <div class="dest-pills">
+                    <span>⏱ 45 min desde casa</span>
+                    <span>🥾 Media</span>
+                  </div>
+                  <div class="dest-mods-mini">
+                    <span class="mm guia">Guía</span>
+                    <span class="mm chofer">Con Chofer</span>
+                    <span class="mm camioneta">Camioneta</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-back">
+                <button class="btn-volver">← Volver</button>
+                <h3 class="back-titulo">Tío Yacu</h3>
+                <p class="back-desc">Aguas cristalinas nacidas de la montaña, rodeadas de naturaleza pura. Un refugio perfecto para relajarse y conectar con la selva amazónica.</p>
+                <div class="actividades-titulo">Actividades incluidas</div>
+                <div class="actividades-grid">
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1531722569936-825d4eeff6ac?w=400&q=80" alt="Baño en pozas" /></div>
+                    <span>Baño en pozas</span>
+                  </div>
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=80" alt="Paseo en bote" /></div>
+                    <span>Paseo en bote</span>
+                  </div>
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&q=80" alt="Caminatas" /></div>
+                    <span>Caminatas</span>
+                  </div>
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?w=400&q=80" alt="Fotografías" /></div>
+                    <span>Fotografías</span>
+                  </div>
+                </div>
+                <div class="back-precios">
+                  <div class="precio-fila"><span class="precio-mod">🧭 Solo Guía</span><span class="precio-num">S/. 80 <small>/persona</small></span></div>
+                  <div class="precio-fila"><span class="precio-mod">🚗 Con Chofer</span><span class="precio-num">S/. 200 <small>/día</small></span></div>
+                  <div class="precio-fila"><span class="precio-mod">🗺️ Solo Camioneta</span><span class="precio-num">S/. 120 <small>/día</small></span></div>
+                </div>
+                <button class="btn-reservar" data-destino="Tío Yacu">Reservar este tour ✦</button>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- ══════════════════════════
+               TARJETA 2: MIRADOR DEL VALLE
+          ══════════════════════════ -->
+          <article class="destino-card" data-modalidades="guia con-chofer sin-chofer">
+            <div class="card-inner">
+
+              <div class="card-front">
+                <div class="dest-foto">
+                  <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80" alt="Mirador del Valle" />
+                  <div class="foto-gradiente"></div>
+                  <span class="dest-categoria">🏔️ Mirador</span>
+                  <div class="click-hint">Clic para descubrir ✦</div>
+                </div>
+                <div class="dest-info-frontal">
+                  <h3 class="dest-nombre">Mirador del Valle</h3>
+                  <p class="dest-lugar">📍 San Martín</p>
+                  <div class="dest-pills">
+                    <span>⏱ 8 horas</span>
+                    <span>🥾 Media</span>
+                  </div>
+                  <div class="dest-mods-mini">
+                    <span class="mm guia">Guía</span>
+                    <span class="mm chofer">Con Chofer</span>
+                    <span class="mm camioneta">Camioneta</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-back">
+                <button class="btn-volver">← Volver</button>
+                <h3 class="back-titulo">Mirador del Valle</h3>
+                <p class="back-desc">Vistas panorámicas impresionantes desde lo alto. El punto más fotogénico de la región, ideal para ver el amanecer sobre las nubes.</p>
+                <div class="actividades-titulo">Actividades incluidas</div>
+                <div class="actividades-grid">
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&q=80" alt="Senderismo" /></div>
+                    <span>Senderismo</span>
+                  </div>
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="Vista panorámica" /></div>
+                    <span>Vista panorámica</span>
+                  </div>
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?w=400&q=80" alt="Fotografías" /></div>
+                    <span>Fotografías</span>
+                  </div>
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=400&q=80" alt="Amanecer" /></div>
+                    <span>Amanecer</span>
+                  </div>
+                </div>
+                <div class="back-precios">
+                  <div class="precio-fila"><span class="precio-mod">🧭 Solo Guía</span><span class="precio-num">S/. 80 <small>/persona</small></span></div>
+                  <div class="precio-fila"><span class="precio-mod">🚗 Con Chofer</span><span class="precio-num">S/. 200 <small>/día</small></span></div>
+                  <div class="precio-fila"><span class="precio-mod">🗺️ Solo Camioneta</span><span class="precio-num">S/. 120 <small>/día</small></span></div>
+                </div>
+                <button class="btn-reservar" data-destino="Mirador del Valle">Reservar este tour ✦</button>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- ══════════════════════════
+               TARJETA 3: LAGUNA ESMERALDA
+          ══════════════════════════ -->
+          <article class="destino-card" data-modalidades="guia con-chofer">
+            <div class="card-inner">
+
+              <div class="card-front">
+                <div class="dest-foto">
+                  <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80" alt="Laguna Esmeralda" />
+                  <div class="foto-gradiente"></div>
+                  <span class="dest-categoria">💎 Laguna</span>
+                  <div class="click-hint">Clic para descubrir ✦</div>
+                </div>
+                <div class="dest-info-frontal">
+                  <h3 class="dest-nombre">Laguna Esmeralda</h3>
+                  <p class="dest-lugar">📍 San Martín</p>
+                  <div class="dest-pills">
+                    <span>⏱ 10 horas</span>
+                    <span>🥾 Alta</span>
+                  </div>
+                  <div class="dest-mods-mini">
+                    <span class="mm guia">Guía</span>
+                    <span class="mm chofer">Con Chofer</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-back">
+                <button class="btn-volver">← Volver</button>
+                <h3 class="back-titulo">Laguna Esmeralda</h3>
+                <p class="back-desc">Aguas cristalinas de color turquesa rodeadas de montañas. Un espejo natural que parece sacado de un sueño, con flora y fauna únicas.</p>
+                <div class="actividades-titulo">Actividades incluidas</div>
+                <div class="actividades-grid">
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=80" alt="Navegación" /></div>
+                    <span>Navegación</span>
+                  </div>
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&q=80" alt="Trekking" /></div>
+                    <span>Trekking</span>
+                  </div>
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&q=80" alt="Avistamiento" /></div>
+                    <span>Avistamiento</span>
+                  </div>
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?w=400&q=80" alt="Fotos" /></div>
+                    <span>Fotografías</span>
+                  </div>
+                </div>
+                <div class="back-precios">
+                  <div class="precio-fila"><span class="precio-mod">🧭 Solo Guía</span><span class="precio-num">S/. 100 <small>/persona</small></span></div>
+                  <div class="precio-fila"><span class="precio-mod">🚗 Con Chofer</span><span class="precio-num">S/. 220 <small>/día</small></span></div>
+                </div>
+                <button class="btn-reservar" data-destino="Laguna Esmeralda">Reservar este tour ✦</button>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- ══════════════════════════
+               TARJETA 4: BOSQUE ENCANTADO
+          ══════════════════════════ -->
+          <article class="destino-card" data-modalidades="guia con-chofer sin-chofer">
+            <div class="card-inner">
+
+              <div class="card-front">
+                <div class="dest-foto">
+                  <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80" alt="Bosque Encantado" />
+                  <div class="foto-gradiente"></div>
+                  <span class="dest-categoria">🌲 Bosque</span>
+                  <div class="click-hint">Clic para descubrir ✦</div>
+                </div>
+                <div class="dest-info-frontal">
+                  <h3 class="dest-nombre">Bosque Encantado</h3>
+                  <p class="dest-lugar">📍 San Martín</p>
+                  <div class="dest-pills">
+                    <span>⏱ 6 horas</span>
+                    <span>🥾 Baja</span>
+                  </div>
+                  <div class="dest-mods-mini">
+                    <span class="mm guia">Guía</span>
+                    <span class="mm chofer">Con Chofer</span>
+                    <span class="mm camioneta">Camioneta</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-back">
+                <button class="btn-volver">← Volver</button>
+                <h3 class="back-titulo">Bosque Encantado</h3>
+                <p class="back-desc">Caminos entre árboles centenarios, musgo verde brillante y el sonido del viento entre las hojas. Magia pura para los amantes de la naturaleza.</p>
+                <div class="actividades-titulo">Actividades incluidas</div>
+                <div class="actividades-grid">
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&q=80" alt="Caminata" /></div>
+                    <span>Caminata</span>
+                  </div>
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=400&q=80" alt="Observación" /></div>
+                    <span>Observación</span>
+                  </div>
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?w=400&q=80" alt="Fotografías" /></div>
+                    <span>Fotografías</span>
+                  </div>
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="Picnic" /></div>
+                    <span>Picnic</span>
+                  </div>
+                </div>
+                <div class="back-precios">
+                  <div class="precio-fila"><span class="precio-mod">🧭 Solo Guía</span><span class="precio-num">S/. 60 <small>/persona</small></span></div>
+                  <div class="precio-fila"><span class="precio-mod">🚗 Con Chofer</span><span class="precio-num">S/. 180 <small>/día</small></span></div>
+                  <div class="precio-fila"><span class="precio-mod">🗺️ Solo Camioneta</span><span class="precio-num">S/. 110 <small>/día</small></span></div>
+                </div>
+                <button class="btn-reservar" data-destino="Bosque Encantado">Reservar este tour ✦</button>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- ══════════════════════════
+               TARJETA 5: CASCADAS GEMELAS
+          ══════════════════════════ -->
+          <article class="destino-card" data-modalidades="guia con-chofer sin-chofer">
+            <div class="card-inner">
+
+              <div class="card-front">
+                <div class="dest-foto">
+                  <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Cascadas Gemelas" />
+                  <div class="foto-gradiente"></div>
+                  <span class="dest-categoria">💦 Cascadas</span>
+                  <div class="click-hint">Clic para descubrir ✦</div>
+                </div>
+                <div class="dest-info-frontal">
+                  <h3 class="dest-nombre">Cascadas Gemelas</h3>
+                  <p class="dest-lugar">📍 San Martín</p>
+                  <div class="dest-pills">
+                    <span>⏱ 7 horas</span>
+                    <span>🥾 Baja</span>
+                  </div>
+                  <div class="dest-mods-mini">
+                    <span class="mm guia">Guía</span>
+                    <span class="mm chofer">Con Chofer</span>
+                    <span class="mm camioneta">Camioneta</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-back">
+                <button class="btn-volver">← Volver</button>
+                <h3 class="back-titulo">Cascadas Gemelas</h3>
+                <p class="back-desc">Dos cascadas que caen en paralelo desde 40 metros de altura. Refrescante, impresionante y perfecta para fotos épicas en medio de la selva.</p>
+                <div class="actividades-titulo">Actividades incluidas</div>
+                <div class="actividades-grid">
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1531722569936-825d4eeff6ac?w=400&q=80" alt="Baño natural" /></div>
+                    <span>Baño natural</span>
+                  </div>
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&q=80" alt="Senderismo" /></div>
+                    <span>Senderismo</span>
+                  </div>
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?w=400&q=80" alt="Fotografías" /></div>
+                    <span>Fotografías</span>
+                  </div>
+                  <div class="actividad">
+                    <div class="act-foto"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="Picnic" /></div>
+                    <span>Picnic</span>
+                  </div>
+                </div>
+                <div class="back-precios">
+                  <div class="precio-fila"><span class="precio-mod">🧭 Solo Guía</span><span class="precio-num">S/. 70 <small>/persona</small></span></div>
+                  <div class="precio-fila"><span class="precio-mod">🚗 Con Chofer</span><span class="precio-num">S/. 190 <small>/día</small></span></div>
+                  <div class="precio-fila"><span class="precio-mod">🗺️ Solo Camioneta</span><span class="precio-num">S/. 115 <small>/día</small></span></div>
+                </div>
+                <button class="btn-reservar" data-destino="Cascadas Gemelas">Reservar este tour ✦</button>
+              </div>
+
+            </div>
+          </article>
+
+        </div><!-- /destinos-slider -->
+      </div><!-- /slider-wrapper -->
+
+      <button class="slider-btn next-btn" aria-label="Siguiente">›</button>
+    </div><!-- /slider-container -->
+
+    <!-- Puntos indicadores -->
+    <div class="slider-dots" id="sliderDots"></div>
+
+  </section>
+
+  <!-- ===== MODAL DE RESERVA ===== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal" role="dialog" aria-modal="true">
+      <button class="modal-cerrar" id="modalCerrar" aria-label="Cerrar">✕</button>
+      <div class="modal-head">
+        <span class="modal-tag">✦ Reserva tu experiencia</span>
+        <h2 class="modal-titulo">Reservar: <em id="modalDestino"></em></h2>
+        <p class="modal-sub">Completa los datos y te contactaremos en menos de 24 horas.</p>
+      </div>
+      <form id="modalForm" novalidate>
+        <div class="form-row">
+          <div class="campo">
+            <label for="m-nombre">Nombre completo</label>
+            <input type="text" id="m-nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="campo">
+            <label for="m-email">Correo electrónico</label>
+            <input type="email" id="m-email" placeholder="correo@ejemplo.com" required />
+          </div>
+        </div>
+        <div class="campo">
+          <label for="m-modalidad">Modalidad de servicio</label>
+          <select id="m-modalidad" required>
+            <option value="">Selecciona una opción...</option>
+            <option value="guia">🧭 Solo Guía</option>
+            <option value="con-chofer">🚗 Camioneta con Chofer</option>
+            <option value="sin-chofer">🗺️ Solo Camioneta</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="campo">
+            <label for="m-fecha">Fecha del tour</label>
+            <input type="date" id="m-fecha" required />
+          </div>
+          <div class="campo">
+            <label for="m-personas">N.º de personas</label>
+            <input type="number" id="m-personas" placeholder="Ej: 2" min="1" max="20" required />
+          </div>
+        </div>
+        <div class="campo">
+          <label for="m-mensaje">Comentarios adicionales</label>
+          <textarea id="m-mensaje" placeholder="Alergias, requerimientos especiales, preguntas..."></textarea>
+        </div>
+        <div id="modal-msg" class="form-mensaje" aria-live="polite"></div>
+        <button type="submit" class="btn-submit">Enviar solicitud ✦</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- WhatsApp flotante -->
+  <a class="wa-float" href="https://wa.me/51999999999" target="_blank" rel="noopener" title="WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <footer>
+    <p>© 2025 Casa Grande · <a href="index.html">Volver al inicio</a></p>
+  </footer>
+
+  <script src="tours.js"></script>
+</body>
+</html>

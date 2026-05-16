@@ -1,0 +1,606 @@
+/* ============================================================
+   CASA GRANDE — tours.css
+   Paleta idéntica al index: blanco · negro · verde oliva
+   ============================================================ */
+
+/* ===== VARIABLES (mismas del index) ===== */
+:root {
+  --blanco:     #ffffff;
+  --crema:      #f9f8f5;
+  --gris-claro: #f0ede8;
+  --gris-med:   #b0a99e;
+  --gris-text:  #6b6460;
+  --negro:      #111110;
+  --negro-soft: #1e1d1b;
+  --oliva:      #5c6b45;
+  --oliva-clr:  #7a8f5f;
+  --oliva-bg:   #edf0e8;
+  --dorado:     #c9a84c;
+  --sombra-s:   0 2px 16px rgba(0,0,0,.07);
+  --sombra-m:   0 8px 40px rgba(0,0,0,.11);
+  --sombra-l:   0 20px 60px rgba(0,0,0,.15);
+  --radio:      4px;
+  --t:          .32s cubic-bezier(.4,0,.2,1);
+
+  /* Dimensiones de la tarjeta — modifica aquí si necesitas */
+  --card-w: 340px;
+  --card-h: 560px;
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--blanco);
+  color: var(--negro);
+  overflow-x: hidden;
+  cursor: none;
+}
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* ===== CURSOR ===== */
+#cursor {
+  position: fixed; z-index: 9999;
+  width: 10px; height: 10px;
+  background: var(--oliva); border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width .18s ease, height .18s ease, background .25s;
+}
+#cursor.grande {
+  width: 44px; height: 44px;
+  background: rgba(92,107,69,.15);
+  border: 1.5px solid var(--oliva);
+}
+
+/* Táctil: ocultar cursor y restaurar puntero */
+@media (pointer: coarse) {
+  #cursor { display: none !important; }
+  html, body, a, button, select, input, textarea { cursor: auto !important; }
+}
+
+/* ================================================================
+   NAVBAR
+   ================================================================ */
+#navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.1rem 2.5rem;
+  background: rgba(255,255,255,.95);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--sombra-s);
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem; font-weight: 400;
+  color: var(--negro); letter-spacing: .04em;
+  transition: color var(--t);
+}
+.nav-logo:hover { color: var(--oliva); }
+.nav-titulo {
+  font-size: .78rem; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--gris-med);
+}
+.nav-cta {
+  padding: .5rem 1.3rem;
+  border: 1.5px solid var(--negro); border-radius: 2rem;
+  font-size: .78rem; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--negro);
+  transition: all var(--t);
+}
+.nav-cta:hover { background: var(--oliva); border-color: var(--oliva); color: var(--blanco); }
+
+/* ================================================================
+   HERO
+   ================================================================ */
+#hero-tours {
+  position: relative; height: 62vh; min-height: 460px;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.hero-foto {
+  position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1800&q=80') center/cover no-repeat;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, rgba(17,17,16,.6) 0%, rgba(40,55,30,.7) 100%);
+}
+.hero-content {
+  position: relative; z-index: 2;
+  text-align: center; padding: 5.5rem 1.5rem 0;
+}
+.hero-badge {
+  display: inline-block;
+  border: 1px solid rgba(163,190,134,.6); color: #a3be86;
+  padding: .35rem 1.2rem; border-radius: 2rem;
+  font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  animation: subir .8s .2s both;
+}
+.hero-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.6rem, 6.5vw, 5rem);
+  font-weight: 400; color: var(--blanco); line-height: 1.1;
+  animation: subir .8s .4s both;
+}
+.hero-titulo em { font-style: italic; color: #a3be86; }
+.hero-sub {
+  color: rgba(255,255,255,.72); font-size: .95rem; font-weight: 300;
+  margin-top: .9rem; max-width: 560px; margin-inline: auto;
+  animation: subir .8s .6s both;
+}
+.btn-scroll {
+  display: inline-block; margin-top: 1.8rem;
+  padding: .68rem 2rem;
+  border: 1.5px solid rgba(255,255,255,.5); border-radius: 2rem;
+  color: var(--blanco); font-size: .82rem;
+  letter-spacing: .1em; text-transform: uppercase;
+  transition: background var(--t);
+  animation: subir .8s .8s both;
+}
+.btn-scroll:hover { background: rgba(255,255,255,.12); }
+
+/* ================================================================
+   BARRA "CÓMO FUNCIONA"
+   ================================================================ */
+.como-funciona {
+  background: var(--negro);
+  display: flex; align-items: center; justify-content: center;
+  flex-wrap: wrap; padding: 1.5rem 2rem;
+}
+.cf-paso {
+  display: flex; align-items: center; gap: .8rem;
+  padding: .7rem 2rem;
+  color: rgba(255,255,255,.65); font-size: .88rem;
+}
+.cf-num {
+  width: 28px; height: 28px;
+  background: var(--oliva); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--blanco); font-size: .78rem; font-weight: 600;
+  flex-shrink: 0;
+}
+.cf-paso strong { color: var(--blanco); }
+.cf-flecha { color: rgba(255,255,255,.2); font-size: 1.1rem; }
+
+/* ================================================================
+   SECCIÓN DESTINOS
+   ================================================================ */
+#destinos {
+  padding: 5.5rem 2rem 7rem;
+  background: var(--crema);
+}
+
+.seccion-cab { text-align: center; margin-bottom: 2.5rem; }
+.tag {
+  display: inline-block;
+  font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--oliva); margin-bottom: .7rem;
+}
+.seccion-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 400; line-height: 1.15;
+}
+.seccion-titulo em { font-style: italic; color: var(--oliva); }
+.seccion-sub { color: var(--gris-text); margin-top: .6rem; font-size: .91rem; }
+
+/* ===== FILTROS ===== */
+.filtros-wrap {
+  display: flex; align-items: center; justify-content: center;
+  flex-wrap: wrap; gap: .7rem; margin-bottom: 3rem;
+}
+.filtros-label {
+  font-size: .75rem; letter-spacing: .15em; text-transform: uppercase;
+  color: var(--gris-med);
+}
+.filtros { display: flex; flex-wrap: wrap; gap: .45rem; justify-content: center; }
+.filtro-btn {
+  padding: .48rem 1.2rem;
+  border: 1.5px solid #ddd8d0; border-radius: 2rem;
+  background: var(--blanco);
+  font-family: 'Outfit', sans-serif; font-size: .81rem; font-weight: 500;
+  color: var(--gris-text); cursor: none;
+  transition: all var(--t);
+}
+.filtro-btn:hover { border-color: var(--oliva); color: var(--oliva); }
+.filtro-btn.activo { background: var(--oliva); border-color: var(--oliva); color: var(--blanco); }
+
+/* ================================================================
+   SLIDER
+   ================================================================ */
+.slider-container {
+  position: relative;
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center;
+  padding: 0 3.5rem;
+}
+.slider-wrapper {
+  width: 100%; overflow: hidden;
+  padding: 1.5rem 0 2.5rem;  /* espacio extra para sombras */
+}
+.destinos-slider {
+  display: flex;
+  gap: 2rem;
+  transition: transform .45s cubic-bezier(.25,1,.5,1);
+  will-change: transform;
+}
+
+/* Botones prev / next */
+.slider-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 46px; height: 46px; border-radius: 50%;
+  background: var(--blanco); border: 1px solid var(--gris-claro);
+  font-size: 1.9rem; line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--sombra-s); z-index: 10; cursor: none;
+  color: var(--negro);
+  transition: all var(--t);
+}
+.slider-btn:hover { background: var(--oliva); color: var(--blanco); border-color: var(--oliva); }
+.slider-btn:disabled { opacity: .3; pointer-events: none; }
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+/* Puntos indicadores */
+.slider-dots {
+  display: flex; justify-content: center; gap: .5rem;
+  margin-top: .5rem;
+}
+.dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--gris-claro); cursor: none;
+  transition: background var(--t), transform var(--t);
+}
+.dot.activo { background: var(--oliva); transform: scale(1.3); }
+
+/* ================================================================
+   TARJETA DE DESTINO — FLIP 3D
+   ================================================================ */
+.destino-card {
+  flex: 0 0 var(--card-w);
+  width: var(--card-w);
+  height: var(--card-h);
+  perspective: 1200px;       /* habilita la profundidad 3D */
+  transition: opacity .4s ease;
+}
+.destino-card.oculto { display: none; }
+
+/* Contenedor que rota */
+.card-inner {
+  width: 100%; height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .7s cubic-bezier(.4,0,.2,1);
+  border-radius: 8px;
+}
+/* Cuando la tarjeta está "volteada", el inner rota 180° */
+.destino-card.volteada .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Cara compartida */
+.card-front,
+.card-back {
+  position: absolute; inset: 0;
+  border-radius: 8px;
+  backface-visibility: hidden;   /* oculta la cara que está detrás */
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+/* ── FRENTE ── */
+.card-front {
+  background: var(--blanco);
+  border: 1px solid var(--gris-claro);
+  box-shadow: var(--sombra-m);
+  display: flex; flex-direction: column;
+}
+
+.dest-foto {
+  position: relative;
+  height: 240px; flex-shrink: 0; overflow: hidden;
+}
+.dest-foto img {
+  transition: transform .55s ease;
+}
+.destino-card:hover .card-front .dest-foto img {
+  transform: scale(1.06);
+}
+.foto-gradiente {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(17,17,16,.55) 0%, transparent 55%);
+  pointer-events: none;
+}
+.dest-categoria {
+  position: absolute; top: .9rem; left: .9rem;
+  background: rgba(17,17,16,.72);
+  backdrop-filter: blur(4px);
+  color: var(--blanco); padding: .28rem .85rem;
+  border-radius: 2rem; font-size: .7rem; letter-spacing: .08em;
+}
+.click-hint {
+  position: absolute; bottom: .9rem; right: .9rem;
+  background: rgba(255,255,255,.9); color: var(--negro);
+  padding: .28rem .8rem; border-radius: 2rem;
+  font-size: .68rem; letter-spacing: .07em; text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  animation: pulso-hint 2.5s ease-in-out infinite;
+}
+@keyframes pulso-hint {
+  0%,100% { opacity: 1; }
+  50%      { opacity: .65; }
+}
+
+.dest-info-frontal {
+  padding: 1.3rem 1.4rem;
+  display: flex; flex-direction: column; gap: .5rem; flex: 1;
+}
+.dest-nombre {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem; font-weight: 400; line-height: 1.2;
+  color: var(--negro);
+}
+.dest-lugar {
+  font-size: .8rem; color: var(--gris-med);
+}
+.dest-pills {
+  display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .2rem;
+}
+.dest-pills span {
+  font-size: .75rem; background: var(--gris-claro);
+  padding: .28rem .75rem; border-radius: 2rem; color: var(--negro-soft);
+}
+
+/* Mini tags de modalidades en el frente */
+.dest-mods-mini {
+  display: flex; flex-wrap: wrap; gap: .35rem; margin-top: auto; padding-top: .5rem;
+}
+.mm {
+  font-size: .68rem; font-weight: 500;
+  padding: .22rem .7rem; border-radius: 2rem;
+  letter-spacing: .05em;
+}
+.mm.guia      { background: var(--oliva-bg); color: var(--oliva); }
+.mm.chofer    { background: var(--negro); color: var(--blanco); }
+.mm.camioneta { background: var(--gris-claro); color: var(--gris-text); border: 1px solid #ddd8d0; }
+
+/* ── REVERSO ── */
+.card-back {
+  background: var(--blanco);
+  border: 1px solid var(--gris-claro);
+  box-shadow: var(--sombra-l);
+  transform: rotateY(180deg);   /* empieza girado, "oculto" */
+  display: flex; flex-direction: column;
+  padding: 1.3rem 1.4rem;
+  gap: .7rem;
+  overflow-y: auto;
+}
+
+.btn-volver {
+  align-self: flex-start;
+  background: none; border: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: .78rem; color: var(--gris-med);
+  cursor: none;
+  transition: color var(--t);
+  padding: 0;
+}
+.btn-volver:hover { color: var(--oliva); }
+
+.back-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem; font-weight: 400; color: var(--negro);
+  line-height: 1.2;
+}
+.back-desc {
+  font-size: .84rem; color: var(--gris-text);
+  line-height: 1.7;
+}
+
+/* ── GALERÍA DE ACTIVIDADES ── */
+.actividades-titulo {
+  font-size: .7rem; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--oliva); margin-top: .3rem;
+}
+.actividades-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .5rem;
+}
+.actividad {
+  display: flex; flex-direction: column; gap: .3rem;
+}
+.act-foto {
+  width: 100%; height: 68px;
+  border-radius: var(--radio); overflow: hidden;
+}
+.act-foto img { transition: transform .4s ease; }
+.actividad:hover .act-foto img { transform: scale(1.08); }
+.actividad span {
+  font-size: .72rem; color: var(--negro-soft);
+  text-align: center; font-weight: 500;
+}
+
+/* ── PRECIOS EN EL REVERSO ── */
+.back-precios {
+  border-top: 1px solid var(--gris-claro);
+  padding-top: .7rem;
+  display: flex; flex-direction: column; gap: .4rem;
+}
+.precio-fila {
+  display: flex; justify-content: space-between; align-items: center;
+}
+.precio-mod { font-size: .81rem; color: var(--gris-text); }
+.precio-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem; font-weight: 400; color: var(--oliva);
+}
+.precio-num small {
+  font-family: 'Outfit', sans-serif;
+  font-size: .68rem; color: var(--gris-med);
+}
+
+/* ── BOTÓN RESERVAR ── */
+.btn-reservar {
+  display: block; width: 100%;
+  padding: .72rem;
+  background: var(--negro); color: var(--blanco);
+  border: none; border-radius: 2rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: .8rem; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase;
+  cursor: none; text-align: center;
+  transition: background var(--t), transform .2s;
+  margin-top: auto;
+}
+.btn-reservar:hover { background: var(--oliva); transform: translateY(-1px); }
+
+/* ================================================================
+   MODAL DE RESERVA
+   ================================================================ */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(17,17,16,.72);
+  backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 1rem;
+  opacity: 0; pointer-events: none;
+  transition: opacity .3s ease;
+}
+.modal-overlay.abierto { opacity: 1; pointer-events: all; }
+
+.modal {
+  background: var(--blanco); border-radius: 10px;
+  padding: 2.5rem; width: 100%; max-width: 600px;
+  max-height: 92vh; overflow-y: auto;
+  position: relative;
+  transform: translateY(18px);
+  transition: transform .38s ease;
+  box-shadow: var(--sombra-l);
+}
+.modal-overlay.abierto .modal { transform: translateY(0); }
+
+.modal-cerrar {
+  position: absolute; top: 1.2rem; right: 1.3rem;
+  background: none; border: none;
+  font-size: 1.1rem; color: var(--gris-med);
+  cursor: none; transition: color .2s;
+}
+.modal-cerrar:hover { color: var(--negro); }
+
+.modal-head { margin-bottom: 1.5rem; }
+.modal-tag {
+  display: inline-block;
+  font-size: .68rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--oliva); margin-bottom: .5rem;
+}
+.modal-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem; font-weight: 400;
+}
+.modal-titulo em { font-style: italic; color: var(--oliva); }
+.modal-sub { color: var(--gris-text); font-size: .87rem; margin-top: .3rem; }
+
+/* Campos del formulario */
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.campo { margin-bottom: .9rem; }
+.campo label {
+  display: block; font-size: .7rem;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--gris-med); margin-bottom: .4rem;
+}
+.campo input, .campo select, .campo textarea {
+  width: 100%; padding: .72rem 1rem;
+  border: 1.5px solid #ddd8d0; border-radius: var(--radio);
+  font-family: 'Outfit', sans-serif; font-size: .9rem;
+  color: var(--negro); background: var(--crema);
+  outline: none; cursor: none;
+  transition: border-color var(--t), box-shadow var(--t);
+}
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+  border-color: var(--oliva);
+  box-shadow: 0 0 0 3px rgba(92,107,69,.12);
+}
+.campo textarea { resize: vertical; min-height: 80px; }
+
+.form-mensaje {
+  font-size: .84rem; padding: .6rem .9rem;
+  border-radius: var(--radio); margin-bottom: .5rem; display: none;
+}
+.form-mensaje.ok  { display: block; background: var(--oliva-bg); color: var(--oliva); }
+.form-mensaje.err { display: block; background: #fde8e8; color: #b93232; }
+
+.btn-submit {
+  width: 100%; padding: .88rem;
+  background: var(--negro); color: var(--blanco);
+  border: none; border-radius: 2rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: .87rem; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase;
+  cursor: none;
+  transition: background var(--t), transform .2s;
+}
+.btn-submit:hover { background: var(--oliva); transform: translateY(-1px); }
+
+/* ================================================================
+   WHATSAPP FLOTANTE
+   ================================================================ */
+.wa-float {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 50;
+  width: 52px; height: 52px;
+  background: #25d366; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,.4);
+  animation: pulso-wa 2.5s ease-in-out infinite;
+  cursor: none; transition: transform .3s;
+}
+.wa-float:hover { transform: scale(1.1); }
+.wa-float svg { width: 26px; height: 26px; fill: white; }
+
+/* ================================================================
+   FOOTER
+   ================================================================ */
+footer {
+  background: var(--negro-soft);
+  text-align: center; padding: 1.8rem;
+  font-size: .8rem; color: rgba(255,255,255,.3);
+}
+footer a { color: var(--oliva-clr); }
+footer a:hover { color: var(--blanco); }
+
+/* ================================================================
+   KEYFRAMES
+   ================================================================ */
+@keyframes subir {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulso-wa {
+  0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,.4); }
+  50%      { box-shadow: 0 4px 36px rgba(37,211,102,.7); }
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 760px) {
+  #navbar { padding: .9rem 1.2rem; }
+  .nav-titulo { display: none; }
+  .cf-flecha { display: none; }
+  .slider-container { padding: 0 2.5rem; }
+  .slider-btn { width: 36px; height: 36px; font-size: 1.5rem; }
+  --card-w: 290px;
+  .destino-card { flex: 0 0 290px; width: 290px; }
+  .form-row { grid-template-columns: 1fr; }
+  .modal { padding: 1.8rem 1.3rem; }
+  .actividades-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 480px) {
+  .hero-titulo { font-size: 2.4rem; }
+  .destino-card { flex: 0 0 270px; width: 270px; }
+}

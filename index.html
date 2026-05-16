@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Casa Grande</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CURSOR PERSONALIZADO-->
+  <div id="cursor"></div>
+
+   <!--===== NAVEGACIÓN =====>-->
+  <nav id="navbar">
+    <a class="nav-logo" href="#">La Casa Grande</a>
+    <ul class="nav-links">
+      <li><a href="#nosotros">La Casa</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#testimonios">Reseñas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="nav-cta" href="#contacto">Reservar Ahora</a>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MENÚ MÓVIL -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#nosotros" class="mob-link">La Casa</a></li>
+      <li><a href="#galeria" class="mob-link">Galería</a></li>
+      <li><a href="#servicios" class="mob-link">Servicios</a></li>
+      <li><a href="#testimonios" class="mob-link">Reseñas</a></li>
+      <li><a href="#contacto" class="mob-link">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-foto"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-badge">✦ Airbnb · Tu refugio perfecto</p>
+      <h1 class="hero-title">La Casa <em>Grande</em></h1>
+      <p class="hero-sub">Descanso auténtico, naturaleza y aventura — todo en un solo lugar.</p>
+      <div class="hero-btns">
+        <a class="btn-blanco" href="#servicios">Ver Servicios</a>
+        <a class="btn-borde" href="#contacto">Hacer Reserva</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-bar"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===== STRIP DE NÚMEROS ===== -->
+  <div class="stats-strip">
+    <div class="stat-item">
+      <span class="stat-n">5★</span>
+      <span class="stat-l">Calificación</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-n">200+</span>
+      <span class="stat-l">Huéspedes</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-n">3</span>
+      <span class="stat-l">Servicios</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-n">24/7</span>
+      <span class="stat-l">Atención</span>
+    </div>
+  </div>
+
+  <!-- ===== NOSOTROS ===== -->
+  <section id="nosotros">
+    <div class="nosotros-grid">
+      <div class="nosotros-imgs reveal">
+        <div class="img-principal">
+          <!-- Reemplaza src con tu foto real -->
+          <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&q=80" alt="Casa Grande exterior" />
+        </div>
+        <div class="img-secundaria">
+          <!-- Reemplaza src con tu foto real -->
+          <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=600&q=80" alt="Interior Casa Grande" />
+        </div>
+      </div>
+      <div class="nosotros-texto reveal">
+        <span class="tag">✦ Nuestra Casa</span>
+        <h2 class="titulo-seccion">Un espacio diseñado para <em>vivir momentos</em> únicos</h2>
+        <p>Ubicados en un entorno privilegiado, La Casa Grande combina la comodidad moderna con el encanto auténtico de la naturaleza. Cada rincón fue pensado para que te sientas como en casa.</p>
+        <p>Espacios amplios, vistas increíbles y todo lo necesario — ya seas viajero solitario, pareja o familia.</p>
+        <ul class="features-list">
+          <li>WiFi de alta velocidad</li>
+          <li>Cocina totalmente equipada</li>
+          <li>Terraza con vista panorámica</li>
+          <li></li>
+          <li>Estacionamiento seguro</li>
+          <li>Check-in flexible</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERÍA ===== -->
+  <section id="galeria">
+    <div class="seccion-cabecera reveal">
+      <span class="tag">✦ Galería</span>
+      <h2 class="titulo-seccion">Conoce cada <em>rincón</em></h2>
+    </div>
+    <div class="galeria-grid reveal">
+      <!-- Reemplaza src con tus fotos reales -->
+      <div class="g-item g-grande">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80" alt="Vista principal" />
+        <div class="g-overlay"></div>
+      </div>
+      <div class="g-item">
+        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&q=80" alt="Dormitorio" />
+        <div class="g-overlay"></div>
+      </div>
+      <div class="g-item">
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="Cocina" />
+        <div class="g-overlay"></div>
+      </div>
+      <div class="g-item">
+        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80" alt="Piscina" />
+        <div class="g-overlay"></div>
+      </div>
+      <div class="g-item">
+        <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=600&q=80" alt="Sala" />
+        <div class="g-overlay"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICIOS ===== -->
+  <section id="servicios">
+    <div class="seccion-cabecera reveal">
+      <span class="tag">✦ Lo que ofrecemos</span>
+      <h2 class="titulo-seccion">Nuestros <em>Servicios</em></h2>
+      <p class="cabecera-sub">Más que un alojamiento — una experiencia completa con la naturaleza.</p>
+    </div>
+
+    <div class="servicios-grid">
+
+      <!-- TOUR FULL DAY -->
+      <article class="card reveal">
+        <div class="card-foto">
+          <img src="IMG/image/tours+.png" alt="Tour Full Day" />
+          <span class="card-badge badge-verde">Más popular</span>
+        </div>
+        <div class="card-cuerpo">
+          <div class="card-icono">🌄</div>
+          <h3 class="card-titulo">Tour Full Day</h3>
+          <p class="card-desc">Explora los destinos más increíbles de la región con guía local, transporte y almuerzo típico incluidos.</p>
+          <ul class="card-lista">
+            <li>Guía local profesional</li>
+            <li>Transporte ida y vuelta</li>
+            <li>Almuerzo típico incluido</li>
+            <li>Fotos del recorrido</li>
+          </ul>
+          <p class="card-precio">Desde S/. 150 <small>/ persona</small></p>
+           <a class="card-btn" href="tours.html">Ver Destinos & Reservar</a>
+        </div>
+      </article>
+
+      <!-- CAMIONETA CON CHOFER -->
+      <article class="card reveal">
+        <div class="card-foto">
+          <img src="IMG/image/changan.jpg" alt="Camioneta con chofer" />
+          <span class="card-badge badge-negro">Recomendado</span>
+        </div>
+        <div class="card-cuerpo">
+          <div class="card-icono">🚗</div>
+          <h3 class="card-titulo">Camioneta con Chofer</h3>
+          <p class="card-desc">Nuestro chofer experto te llevará a donde quieras, conociendo cada ruta y secreto de la zona.</p>
+          <ul class="card-lista">
+            <li>Chofer profesional y bilingüe</li>
+            <li>Camioneta 4×2</li>
+            <li>Rutas personalizadas</li>
+            <li>Disponible todo el día</li>
+          </ul>
+          <p class="card-precio">Desde S/. 200 <small>/ día</small></p>
+          <a class="card-btn" href="#contacto">Reservar con Chofer</a>
+        </div>
+      </article>
+
+      <!-- CAMIONETA SIN CHOFER -->
+      <article class="card reveal">
+        <div class="card-foto">
+          <img src="IMG/image/changan1.png" alt="Camioneta sin chofer" />
+        </div>
+        <div class="card-cuerpo">
+          <div class="card-icono">🗺️</div>
+          <h3 class="card-titulo">Camioneta sin Chofer</h3>
+          <p class="card-desc">Libertad total para explorar a tu ritmo. Alquila nuestra camioneta 4×2 y crea tu propia aventura.</p>
+          <ul class="card-lista">
+            <li>Camioneta 4×2 impecable</li>
+            <li>Mapa y recomendaciones</li>
+            <li>Seguro de viaje cubierto</li>
+            <li>Entrega en la casa</li>
+          </ul>
+          <p class="card-precio">Desde S/. 120 <small>/ día</small></p>
+          <a class="card-btn" href="#contacto">Reservar Camioneta</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== PROCESO ===== -->
+  <section id="proceso">
+    <div class="proceso-inner">
+      <div class="seccion-cabecera reveal">
+        <span class="tag tag-claro">✦ Cómo funciona</span>
+        <h2 class="titulo-seccion titulo-blanco">Reservar es <em>muy fácil</em></h2>
+      </div>
+      <div class="pasos-grid">
+        <div class="paso reveal">
+          <div class="paso-num">01</div>
+          <h3 class="paso-titulo">Elige tu servicio</h3>
+          <p class="paso-desc">Selecciona el tour o el tipo de alquiler que mejor se adapte a tu viaje.</p>
+        </div>
+        <div class="paso reveal">
+          <div class="paso-num">02</div>
+          <h3 class="paso-titulo">Contáctanos</h3>
+          <p class="paso-desc">Escríbenos por WhatsApp o completa el formulario con tus fechas.</p>
+        </div>
+        <div class="paso reveal">
+          <div class="paso-num">03</div>
+          <h3 class="paso-titulo">Confirmación</h3>
+          <p class="paso-desc">Recibirás todos los detalles confirmados en menos de 24 horas.</p>
+        </div>
+        <div class="paso reveal">
+          <div class="paso-num">04</div>
+          <h3 class="paso-titulo">¡A disfrutar!</h3>
+          <p class="paso-desc">Llegamos a tu encuentro y comenzamos la aventura juntos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIOS ===== -->
+  <section id="testimonios">
+    <div class="seccion-cabecera reveal">
+      <span class="tag">✦ Reseñas</span>
+      <h2 class="titulo-seccion">Lo que dicen nuestros <em>huéspedes</em></h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card reveal">
+        <div class="estrellas">★★★★★</div>
+        <p class="test-texto">"La casa es un sueño. El tour Full Day fue lo mejor de nuestro viaje. ¡Volvemos el año que viene!"</p>
+        <div class="test-autor">
+          <div class="test-avatar">MC</div>
+          <div>
+            <strong>María & Carlos</strong>
+            <span>Lima, Perú</span>
+          </div>
+        </div>
+      </div>
+      <div class="test-card reveal">
+        <div class="estrellas">★★★★★</div>
+        <p class="test-texto">"Alquilamos la camioneta con chofer y fue la mejor decisión. Nos llevó a lugares increíbles."</p>
+        <div class="test-autor">
+          <div class="test-avatar">SR</div>
+          <div>
+            <strong>Sophie R.</strong>
+            <span>París, Francia</span>
+          </div>
+        </div>
+      </div>
+      <div class="test-card reveal">
+        <div class="estrellas">★★★★★</div>
+        <p class="test-texto">"La camioneta sin chofer fue una aventura increíble. Los anfitriones son los mejores. ¡100% recomendado!"</p>
+        <div class="test-autor">
+          <div class="test-avatar">JA</div>
+          <div>
+            <strong>Juan A.</strong>
+            <span>Bogotá, Colombia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto">
+    <div class="contacto-grid">
+      <div class="contacto-info reveal">
+        <span class="tag">✦ Contáctanos</span>
+        <h2 class="titulo-seccion">Hagamos tu viaje <em>realidad</em></h2>
+        <p>Escríbenos con tus fechas y el servicio deseado. Te respondemos a la brevedad.</p>
+        <ul class="info-lista">
+          <li>
+            <span class="info-icono">📍</span>
+            <div>
+              <small>Dirección</small>
+              La Casa Grande - Jepelacio, Moyobamba, Perú
+            </div>
+          </li>
+          <li>
+            <span class="info-icono">📱</span>
+            <div>
+              <small>WhatsApp</small>
+              +51 924 281 854
+            </div>
+          </li>
+          <li>
+            <span class="info-icono">✉️</span>
+            <div>
+              <small>Correo</small>
+              lacasagrande45@gmail.com
+            </div>
+          </li>
+          <li>
+            <span class="info-icono">🕐</span>
+            <div>
+              <small>Atención</small>
+              Lun – Dom · 7:00am – 6:00pm
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="formulario-wrap reveal">
+        <h3 class="form-titulo">Solicitar Reserva</h3>
+        <form id="reservaForm" novalidate>
+          <div class="form-row">
+            <div class="campo">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+            </div>
+            <div class="campo">
+              <label for="apellido">Apellido</label>
+              <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required />
+            </div>
+          </div>
+          <div class="campo">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required />
+          </div>
+          <div class="campo">
+            <label for="servicio">Servicio de interés</label>
+            <select id="servicio" name="servicio" required>
+              <option value="">Selecciona un servicio...</option>
+              <option value="tour">🌄 Tour Full Day</option>
+              <option value="con-chofer">🚗 Camioneta con Chofer</option>
+              <option value="sin-chofer">🗺️ Camioneta sin Chofer</option>
+              <option value="hospedaje">🏠 Solo alojamiento</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="campo">
+              <label for="llegada">Fecha de llegada</label>
+              <input type="date" id="llegada" name="llegada" required />
+            </div>
+            <div class="campo">
+              <label for="salida">Fecha de salida</label>
+              <input type="date" id="salida" name="salida" required />
+            </div>
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Número de personas, consultas adicionales..."></textarea>
+          </div>
+          <div id="form-msg" class="form-mensaje" aria-live="polite"></div>
+          <button type="submit" class="btn-submit">Enviar Solicitud ✦</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHATSAPP FLOTANTE ===== -->
+  <a class="wa-float" href="https://wa.me/51924281854?text=Hola%20Casa%20Grande,%20deseo%20solicitar%20una%20reserva" target="_blank" rel="noopener" title="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">Casa Grande</div>
+      <ul class="footer-nav">
+        <li><a href="#nosotros">La Casa</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#testimonios">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 La Casa Grande · Todos los derechos reservados · Hecho con ♥</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
